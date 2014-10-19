@@ -1,6 +1,7 @@
 package br.com.sevencode.android.antitedio;
 
 import com.parse.Parse;
+import com.parse.ParseFacebookUtils;
 
 import android.app.Application;
 
@@ -16,5 +17,7 @@ public class ReleventApp extends Application {
 		super.onCreate();
 		
 		Parse.initialize(this, "cdBdah6LvqTkDZ705lxB3bf6teXoEv5NS5UEC2mz", "TilCqTseTA2Tr8MvkQ7zEtCyen86gR87JgCbxkvN");
+		
+		ParseFacebookUtils.initialize(getString(R.string.facebook_app_id));
 	}
 }
